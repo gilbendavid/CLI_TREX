@@ -1,7 +1,7 @@
 class Analytic {
-    constructor(type, matric, args) {
+    constructor(type, metric, args) {
       this.type = type;
-      this.matric = matric;
+      this.metric = metric;
       this.args = args; 
     }
   }
