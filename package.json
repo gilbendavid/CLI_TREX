@@ -1,0 +1,25 @@
+{
+  "name": "cli-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gil Ben David",
+  "license": "",
+  "bin": {
+    "hello": "./bin/index.js",
+    "readSites": "./bin/readSites.js",
+    "avg_dni": "./bin/avg_dni.js",
+    "avg_ghi": "./bin/avg_ghi.js",
+    "avg_lat_tilt": "./bin/avg_lat_tilt.js"
+  },
+  "dependencies": {
+    "boxen": "^4.0.0",
+    "chalk": "^2.4.2",
+    "node-fetch": "^2.6.1",
+    "yargs": "^13.2.4"
+  }
+}

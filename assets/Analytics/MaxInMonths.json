@@ -1,0 +1,7 @@
+{
+    "type" : "MaxInMonths",
+    "matric" : "avg_dni",
+    "args" : [
+        {"montsh" : ["feb","dec"]}
+    ]
+}

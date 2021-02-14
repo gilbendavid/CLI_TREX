@@ -1,0 +1,7 @@
+{
+    "type" : "MinAnnually",
+    "matric" : "avg_dni",
+    "args" : [
+        {"montsh" : ["feb","dec"]}
+    ]
+}
