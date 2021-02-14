@@ -1,4 +1,4 @@
-const Analytic  = require('../models/analytic.js')
+const Analytic  = require('./analytic.js')
 
 class Analytics {
     constructor(){
