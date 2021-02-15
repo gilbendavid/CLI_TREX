@@ -15,4 +15,6 @@ const boxenOptions = {
 const msgBoxTitle = boxen(commandTitle, boxenOptions );
 console.log(msgBoxTitle);
 
-SiteUtil.readSites().then(data => SiteUtil.printSites(data.sites)).catch(err => console.log(err));
+SiteUtil.readSites()
+.then(data => SiteUtil.printSites(data.sites))
+.catch(err => console.log(err));

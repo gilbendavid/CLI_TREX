@@ -2,6 +2,7 @@
 const fs = require('fs');
 const sitesFolder = '../assets/Sites';
 const Sites  = require('../models/sites.js');
+const Site  = require('../models/site.js');
 
 exports.readSites = function()
 {
@@ -19,6 +20,15 @@ exports.readSites = function()
         } 
       })
     }) 
+}
+
+exports.readSite = function(siteName)
+{
+  return new Promise((resolve, reject) => {
+      let json_data = require(sitesFolder+'/'+siteName+'.json');
+      let s = new Site(json_data.siteName,json_data.latitude,json_data.longitude);
+      resolve(s);
+  }) 
 }
 
 exports.printSites = function(sites)

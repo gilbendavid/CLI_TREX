@@ -27,3 +27,19 @@ exports.printAnalytics = function(analytics)
       console.log(JSON.stringify(analytic));
     })
 }
+
+exports.MaxInMonths = function(data,args)
+{
+  console.log('MaxInMonths');
+  console.log(args);
+}
+
+
+exports.MinAnnually = function(data,args)
+{
+  console.log('-----MinAnnually-----');
+  //TODO - implement MinAnnually.....
+}
+
+
+//TODO - implement more Analytics.....

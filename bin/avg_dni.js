@@ -17,8 +17,11 @@ const boxenOptions = {
 const msgBoxTitle = boxen(commandTitle, boxenOptions );
 console.log(msgBoxTitle);
 
-SiteUtil.readSites().then(data => 
+SiteUtil.readSites()
+    .then(data => 
     data.sites.forEach(site => {
-        FetchUtil.fetchSite(site,"avg_dni");   
+        FetchUtil.fetchSite(site,"avg_dni")
+        .then(data => FetchUtil.printFetchSites(data,site,"avg_dni"))
+        .catch(err => console.log(err));          
     }))
     .catch(err => console.log(err));
