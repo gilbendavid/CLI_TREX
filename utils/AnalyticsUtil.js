@@ -24,21 +24,31 @@ exports.readAnalytics = function()
 exports.printAnalytics = function(analytics)
 {
     analytics.forEach(analytic => {
-      console.log(JSON.stringify(analytic));
+      console.log('Analytic ' + JSON.stringify(analytic));
     })
 }
 
-exports.MaxInMonths = function(data,args)
+exports.MaxInMonths = function(data,siteName,metric,args)
 {
-  console.log('MaxInMonths');
-  console.log(args);
+  console.log(`MaxInMonths for site=${siteName} when metric=${metric}`);
+  if(args.length === 0){
+    console.log('No args for MaxInMonths analytic')
+  }
+  else{
+    let argsMonths = [];
+    args[0].months.forEach(month => {
+      argsMonths.push(data.monthly[month]);
+    })
+    let maxInMon = Math.max.apply(Math, argsMonths)
+    console.log(`MaxInMonths = ${maxInMon}`);
+    return maxInMon;
+  }
+
 }
 
-
-exports.MinAnnually = function(data,args)
+exports.MinAnnually = function(data,siteName,metric,args)
 {
-  console.log('-----MinAnnually-----');
-  //TODO - implement MinAnnually.....
+  console.log(`MinAnnually for site=${siteName} when metric=${metric}`);
 }
 
 

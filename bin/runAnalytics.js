@@ -35,7 +35,7 @@ SiteUtil.readSite(options.name)
             AnalyticsUtil.printAnalytics(data.analytics)
             data.analytics.forEach(analytic => {
                 FetchUtil.fetchSite(site,analytic.metric)
-                .then(data => AnalyticsUtil[analytic.type](data,analytic.args))
+                .then(data => AnalyticsUtil[analytic.type](data,site.siteName,analytic.metric,analytic.args))
             });
         }).catch(err => console.log(err));
     })

@@ -2,6 +2,6 @@
     "type" : "MaxInMonths",
     "metric" : "avg_dni",
     "args" : [
-        {"montsh" : ["feb","dec"]}
+        {"months" : ["jan","feb"]}
     ]
 }
