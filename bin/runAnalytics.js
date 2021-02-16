@@ -3,9 +3,10 @@ console.clear();
 const AnalyticsUtil  = require('../utils/AnalyticsUtil.js');
 const FetchUtil  = require('../services/fetchUtil');
 const SiteUtil  = require('../utils/siteUtils.js');
-const chalk = require("chalk");
-const boxen = require("boxen");
+const PrintUtil  = require('../utils/printUtil');
 const yargs = require("yargs");
+
+PrintUtil.printCommandTitle("Run Analytics","white","magentaBright","magentaBright");
 
 const options = yargs
  .usage("Site: -s <name>")
@@ -13,18 +14,6 @@ const options = yargs
  .argv;
 
 const commandPrompt = `Selected Site for Analytics ->  ${options.name}!`;
-
-
-const commandTitle = chalk.magentaBright.bold("Run Analytics");
-const boxenOptions = {
- padding: 1,
- margin: 1,
- borderStyle: "round",
- borderColor: "magentaBright",
- backgroundColor: "white"
-};
-const msgBoxTitle = boxen(commandTitle, boxenOptions );
-console.log(msgBoxTitle);
 console.log(commandPrompt);
 
 SiteUtil.readSite(options.name)

@@ -1,21 +1,9 @@
 #!/usr/bin/env node
-
-console.clear();
 const SiteUtil  = require('../utils/siteUtils.js');
 const FetchUtil  = require('../services/fetchUtil');
-const chalk = require("chalk");
-const boxen = require("boxen");
+const PrintUtil  = require('../utils/printUtil');
 
-const commandTitle = chalk.green.bold("avg_ghi");
-const boxenOptions = {
- padding: 1,
- margin: 1,
- borderStyle: "round",
- borderColor: "green",
- backgroundColor: "white"
-};
-const msgBoxTitle = boxen(commandTitle, boxenOptions );
-console.log(msgBoxTitle);
+PrintUtil.printCommandTitle("avg_ghi","white","green","green");
 
 SiteUtil.readSites()
 .then(data => 

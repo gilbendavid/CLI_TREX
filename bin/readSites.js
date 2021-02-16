@@ -1,19 +1,9 @@
 #!/usr/bin/env node
 console.clear();
 const SiteUtil  = require('../utils/siteUtils.js');
-const chalk = require("chalk");
-const boxen = require("boxen");
+const PrintUtil  = require('../utils/printUtil');
 
-const commandTitle = chalk.blue.bold("Read Sites");
-const boxenOptions = {
- padding: 1,
- margin: 1,
- borderStyle: "round",
- borderColor: "blue",
- backgroundColor: "white"
-};
-const msgBoxTitle = boxen(commandTitle, boxenOptions );
-console.log(msgBoxTitle);
+PrintUtil.printCommandTitle("Read Sites","white","blue","blue");
 
 SiteUtil.readSites()
 .then(data => SiteUtil.printSites(data.sites))

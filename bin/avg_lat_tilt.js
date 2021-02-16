@@ -3,19 +3,9 @@
 console.clear();
 const SiteUtil  = require('../utils/siteUtils.js');
 const FetchUtil  = require('../services/fetchUtil');
-const chalk = require("chalk");
-const boxen = require("boxen");
+const PrintUtil  = require('../utils/printUtil');
 
-const commandTitle = chalk.cyan.bold("avg_lat_tilt");
-const boxenOptions = {
- padding: 1,
- margin: 1,
- borderStyle: "round",
- borderColor: "cyan",
- backgroundColor: "white"
-};
-const msgBoxTitle = boxen(commandTitle, boxenOptions );
-console.log(msgBoxTitle);
+PrintUtil.printCommandTitle("avg_lat_tilt","white","cyan","cyan");
 
 SiteUtil.readSites()
 .then(data => 
