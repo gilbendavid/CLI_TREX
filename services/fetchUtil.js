@@ -24,17 +24,6 @@ exports.fetchSite = function(site,field)
 })
 }
 
-exports.printFetchSites = function (data,site,field){
-  console.log('-------------------------------');     
-  console.log('Site Name:', site.siteName);
-  if(data.error){
-    console.log(JSON.stringify(data.error));
-  }
-  else{
-    console.log(`${field}:`, JSON.stringify(data));
-  }
-  console.log('-------------------------------');   
-}
 
 
     

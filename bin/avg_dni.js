@@ -8,7 +8,7 @@ SiteUtil.readSites()
     .then(data => 
     data.sites.forEach(site => {
         FetchUtil.fetchSite(site,"avg_dni")
-        .then(data => FetchUtil.printFetchSites(data,site,"avg_dni"))
+        .then(data => PrintUtil.printFetchSites(data,site,"avg_dni"))
         .catch(err => console.log(err));          
     }))
     .catch(err => console.log(err));

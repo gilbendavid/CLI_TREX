@@ -6,5 +6,5 @@ const PrintUtil  = require('../utils/printUtil');
 PrintUtil.printCommandTitle("Read Sites","white","blue","blue");
 
 SiteUtil.readSites()
-.then(data => SiteUtil.printSites(data.sites))
+.then(data => PrintUtil.printSites(data.sites))
 .catch(err => console.log(err));

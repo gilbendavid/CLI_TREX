@@ -21,7 +21,7 @@ SiteUtil.readSite(options.name)
         console.log(site)
         AnalyticsUtil.readAnalytics().
         then(data => {
-            AnalyticsUtil.printAnalytics(data.analytics)
+            PrintUtil.printAnalytics(data.analytics)
             data.analytics.forEach(analytic => {
                 FetchUtil.fetchSite(site,analytic.metric)
                 .then(data => AnalyticsUtil[analytic.type](data,site.siteName,analytic.metric,analytic.args))

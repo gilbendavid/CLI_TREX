@@ -9,10 +9,10 @@ class Analytics {
       this.analytics.push(a)
       return a
     }
-    get allAnalyticS(){
+    get allAnalytics(){
       return this.analytics
     }
-    get numberOfAnalyticS(){
+    get numberOfAnalytics(){
         return this.analytics.length
     }
   }

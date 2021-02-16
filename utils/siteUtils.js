@@ -31,10 +31,4 @@ exports.readSite = function(siteName)
   }) 
 }
 
-exports.printSites = function(sites)
-{
-    sites.forEach(site => {
-      console.log(JSON.stringify(site));
-    })
-}
 

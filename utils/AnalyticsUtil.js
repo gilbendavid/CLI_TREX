@@ -21,13 +21,6 @@ exports.readAnalytics = function()
     }) 
 }
 
-exports.printAnalytics = function(analytics)
-{
-    analytics.forEach(analytic => {
-      console.log('Analytic ' + JSON.stringify(analytic));
-    })
-}
-
 exports.MaxInMonths = function(data,siteName,metric,args)
 {
   console.log(`MaxInMonths for site=${siteName} when metric=${metric}`);
@@ -35,13 +28,19 @@ exports.MaxInMonths = function(data,siteName,metric,args)
     console.log('No args for MaxInMonths analytic')
   }
   else{
-    let argsMonths = [];
-    args[0].months.forEach(month => {
-      argsMonths.push(data.monthly[month]);
-    })
-    let maxInMon = Math.max.apply(Math, argsMonths)
-    console.log(`MaxInMonths = ${maxInMon}`);
-    return maxInMon;
+    if(data.error){
+      console.log('Error '+JSON.stringify(data.error));
+      return data.error;
+    }
+    else{
+      let argsMonths = [];
+      args[0].months.forEach(month => {
+        argsMonths.push(data.monthly[month]);
+      })
+      let maxInMon = Math.max.apply(Math, argsMonths)
+      console.log(`MaxInMonths = ${maxInMon}`);
+      return maxInMon;
+    }
   }
 
 }

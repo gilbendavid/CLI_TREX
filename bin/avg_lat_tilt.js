@@ -11,7 +11,7 @@ SiteUtil.readSites()
 .then(data => 
 data.sites.forEach(site => {
     FetchUtil.fetchSite(site,"avg_lat_tilt")
-    .then(data => FetchUtil.printFetchSites(data,site,"avg_lat_tilt"))
+    .then(data => PrintUtil.printFetchSites(data,site,"avg_lat_tilt"))
     .catch(err => console.log(err));          
 }))
 .catch(err => console.log(err));
