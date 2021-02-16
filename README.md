@@ -3,21 +3,19 @@
 #CLI Commands - cli-project\bin
 
 #index.js
-#readSites.js
-#avg_dni.js
-#avg_ghi.js
-#avg_lat_tilt.js
-#runAnalytics.js -s Tokyo|Melbourne|NewYork|Barcelona
 
+#readSites.js
+
+#avg_dni.js
+
+#avg_ghi.js
+
+#avg_lat_tilt.js
+
+#runAnalytics.js -s <siteName>
 
 #Sites - cli-project\assets\Sites
-Barcelona
-Melbourne
-NewYork
-Tokyo
 
 #Analytics
-MaxInMonths
-MinAnnually
 
 #Notifications
